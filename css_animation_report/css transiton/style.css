@@ -1,0 +1,30 @@
+.test {
+	position: absolute;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.test {
+	/*transition: width, opacity 0.5s, 1s ease, linear 0.5s, 5s;
+    -webkit-transition: width, opacity 0.5s, 1s ease, linear 0.5s, 5s;*/
+
+    -webkit-transition-property: width, opacity;
+    transition-property: width, opacity;
+
+	-webkit-transition-duration: 0.5s, 1s;
+	transition-duration: 0.5s, 1s;
+
+	-webkit-transition-timing-function: ease, linear;
+	transition-timing-function: ease, linear;
+
+	-webkit-transition-delay: 0.5s, 1s;
+	transition-delay: 0.5s, 1s;
+}
+.test:hover {
+	opacity: 0.1;
+    width: 200px;
+}

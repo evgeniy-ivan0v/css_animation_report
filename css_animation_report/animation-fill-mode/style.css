@@ -1,0 +1,52 @@
+div {
+    position: relative;
+    height: 2.4em;
+    margin: 1.5em 1em;
+    padding: .2em;
+    border: 1px solid mediumturquoise;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+div:before {
+    content: attr(data-content);
+    display: inline-block;  
+    position: absolute;
+    left: .2em;
+    width: 9em;
+    height: 2em;
+    padding: .2em;
+    background: mediumturquoise;
+    border-radius: 3px;
+
+
+    animation: timing 5s;
+    animation-delay: 3s;
+
+    
+    line-height: 2em;
+    text-shadow: .05em .05em teal;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FFF;
+}
+
+@keyframes timing {
+  0% {
+      left: -1em;
+  }
+  100%{
+      left: 100%;
+      margin-left: -8em;
+  }
+}
+
+
+.forwards:before{
+    animation-fill-mode: forwards;
+}
+.backwards:before{
+    animation-fill-mode: backwards;
+}
+.both:before{
+    animation-fill-mode: both;
+}
